@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E-Voting OSIM</title>
+  <title>E-Voting OSIM MTsN 1 Kota Pekanbaru</title>
+  <!-- Silakan ganti link href di bawah dengan URL logo sekolah atau OSIM MTsN 1 -->
   <link rel="icon" href="https://lh3.googleusercontent.com/u/0/d/1I78ilr98BFmzJDP5vwlev-HQv1OuQ6aK" />
   <style>
     html, body {
@@ -33,7 +34,7 @@
   <div class="iframe-container">
     <iframe
       id="app"
-      src="https://script.google.com/macros/s/AKfycbwRiMnrFPmTQ8gFX05EqYvs2YeQVHFW21FwyFBRrSXbufNglu6vE6_Hbqdjig-PK1gF/exec"
+      src=""
       scrolling="yes"
       allowfullscreen="true"
       webkitallowfullscreen="true"
@@ -41,5 +42,16 @@
       allow="fullscreen; camera; microphone; display-capture; geolocation;">
     </iframe>
   </div>
+
+  <script>
+    // Base URL dari Google Apps Script (URL Aplikasi E-Voting)
+    const baseUrl = "https://script.google.com/macros/s/AKfycbwRiMnrFPmTQ8gFX05EqYvs2YeQVHFW21FwyFBRrSXbufNglu6vE6_Hbqdjig-PK1gF/exec";
+    
+    // Menangkap parameter dari URL GitHub Pages (misal: ?page=admin)
+    const urlParams = window.location.search;
+    
+    // Memasukkan URL gabungan ke dalam iframe
+    document.getElementById("app").src = baseUrl + urlParams;
+  </script>
 </body>
 </html>
